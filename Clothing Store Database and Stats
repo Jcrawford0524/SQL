@@ -2,11 +2,33 @@ CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price I
 INSERT INTO store VALUES (1, "sweater", 1, 2, "Cotton");
 INSERT INTO store VALUES (2, "shrits", 5, 3,"silk");
 INSERT INTO store VALUES (3, "dresses", 5, 6,"satin");
-INSERT INTO store VALUES (4, "sandles", 4, 4,"leather");
+INSERT INTO store VALUES (4, "sandles", 16, 35,"leather");
+INSERT INTO store VALUES (5, "purse" , 4, 9, "jean");
+INSERT INTO store VALUES (6, "socks" , 9, 8, "wool");
+INSERT INTO store VALUES (7, "hats", 11, 15, "fur");
+
+SELECT * FROM store
+ORDER BY price desc;
+
+SELECT fabric, price, quantity
+FROM store
+order by price desc
+limit 5; 
 
 
-SELECT * FROM store order by price;
-SELECT name,sum(price) from store group by name;
+SELECT AVG(price) "avg price"
+FROM store
+order by price asc
+limit 5;
+
+
+
+
+
+
+
+
+
 
 
 
