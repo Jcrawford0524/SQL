@@ -1,0 +1,18 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, fabric INTEGER);
+INSERT INTO store VALUES (1, "sweater", 1, 2, "Cotton");
+INSERT INTO store VALUES (2, "shrits", 5, 3,"silk");
+INSERT INTO store VALUES (3, "dresses", 5, 6,"satin");
+INSERT INTO store VALUES (4, "sandles", 4, 4,"leather");
+
+
+SELECT * FROM store order by price;
+SELECT name,sum(price) from store group by name;
+
+
+
+
+
+
+
+
+
